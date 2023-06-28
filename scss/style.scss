@@ -1,0 +1,130 @@
+@import "variables";
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-image: linear-gradient(to bottom, $cool_coder, $cool_facebook);
+    display: flex;
+    flex-wrap: wrap;
+    .menu__main{
+        width: 100%;
+        background-color: goldenrod;
+        color: black;
+        .item{
+            @include flex-row-center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    }
+}
+
+.container_2{
+    width: 30%;
+    color: aliceblue;
+    font-size: 15px;
+    @include flex-column;
+    h2{
+        font-size: 30px;
+        padding: 10px;
+    }
+}
+
+.container_3{
+    width: 70%;
+    @include flex-center-center;
+}
+
+.container_4{
+    width: 100%;
+    background-color: $cool_facebook;
+    footer{
+        color: aliceblue;
+        padding: 10px;
+        h3{
+            font-size: 20px;
+        }
+    }
+}
+
+.container_5{
+    width: 100%;
+    padding: 10px;
+    background-image: linear-gradient(to bottom, $cool_coder, $cool_facebook);
+    color: aliceblue;
+    @include flex-column-start;
+    .item_2{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        .name_product{
+            font-size: 20px;
+        }
+    }
+}
+
+iframe{
+    width: 350px;
+    height: 200px;
+}
+
+a:hover{
+    background-color: black;
+}
+
+a:active{
+    background-color: crimson;
+}
+
+@media (max-width: 600px) {
+    .menu__main{
+        @include flex-column;
+        font-size: 20px;
+        .item{
+            background-image: linear-gradient(to left, gold, goldenrod);
+            padding: 5px;
+            @include flex-jcenter;
+            width: 100%;
+        }
+    }
+    .container_2{
+        width: 100%;
+        background-image: radial-gradient($cool_coder, $cool_facebook);
+        font-size: 12px;
+        @include flex-column-center;
+    }
+    .container_3{
+        width: 100%;
+        background-image: radial-gradient($cool_coder, $cool_facebook);
+        .item_4 img{
+            padding: 5px;
+            width: 300px;
+            height: 200px;
+        }
+    }
+    .item_2{
+        padding: 5px;
+        @include flex-column-center;
+        width: 100%;
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        img{
+            padding: 5px;
+            width: 200px;
+        }
+    }
+    .container_5{
+        .item_2{
+            .name_product{
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 15px;
+            }
+        }
+    }
+    iframe{
+        padding: 0;
+        width: 250px;
+        height: 150px;
+    }
+    #titulo{
+        @include flex-acenter;
+    }
+}
