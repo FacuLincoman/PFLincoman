@@ -1,3 +1,4 @@
+/* aqui estan los mixins */
 body {
   padding: 0;
   margin: 0;
@@ -37,20 +38,19 @@ body .menu__main .item {
   align-items: center;
 }
 
-.container_4 {
+.container_4, .container_5 {
   width: 100%;
-  background-color: rgb(11, 132, 238);
+  background-image: linear-gradient(rgb(11, 132, 238), rgb(28, 31, 48));
 }
-.container_4 footer {
+.container_4 footer, .container_5 footer {
   color: aliceblue;
   padding: 10px;
 }
-.container_4 footer h3 {
+.container_4 footer h3, .container_5 footer h3 {
   font-size: 20px;
 }
 
 .container_5 {
-  width: 100%;
   padding: 10px;
   background-image: linear-gradient(to bottom, rgb(28, 31, 48), rgb(11, 132, 238));
   color: aliceblue;
@@ -65,9 +65,26 @@ body .menu__main .item {
   font-size: 20px;
 }
 
+.Button {
+  padding: 10px;
+  width: 10px;
+}
+
+.boton, .boton--cancelar {
+  background-color: rgb(11, 132, 238);
+  color: antiquewhite;
+  border-radius: 20px;
+  box-shadow: 1px 1px 12px 0px rgb(11, 132, 238);
+}
+
+.boton--cancelar {
+  background: aliceblue;
+  color: blue;
+}
+
 iframe {
-  width: 350px;
   height: 200px;
+  width: 350px;
 }
 
 a:hover {
@@ -103,10 +120,10 @@ a:active {
     width: 100%;
     background-image: radial-gradient(rgb(28, 31, 48), rgb(11, 132, 238));
   }
-  .container_3 .item_4 img {
+  .item_4 img {
     padding: 5px;
-    width: 300px;
     height: 200px;
+    width: 300px;
   }
   .item_2 {
     padding: 5px;
@@ -128,8 +145,8 @@ a:active {
   }
   iframe {
     padding: 0;
-    width: 250px;
     height: 150px;
+    width: 250px;
   }
   #titulo {
     display: flex;

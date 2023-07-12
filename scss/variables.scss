@@ -41,3 +41,13 @@ $cool_facebook: rgb(11, 132, 238) ;
     flex-direction: column;
     justify-content: flex-start;
 }
+
+@mixin flex-wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin sizes($width, $height){
+    height: $height;
+    width: $width;
+}

@@ -1,12 +1,12 @@
 @import "variables";
+/* aqui estan los mixins */
 
 body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     background-image: linear-gradient(to bottom, $cool_coder, $cool_facebook);
-    display: flex;
-    flex-wrap: wrap;
+    @include flex-wrap;
     .menu__main{
         width: 100%;
         background-color: goldenrod;
@@ -36,7 +36,7 @@ body{
 
 .container_4{
     width: 100%;
-    background-color: $cool_facebook;
+    background-image: linear-gradient($cool_facebook, $cool_coder);
     footer{
         color: aliceblue;
         padding: 10px;
@@ -47,7 +47,7 @@ body{
 }
 
 .container_5{
-    width: 100%;
+    @extend .container_4;
     padding: 10px;
     background-image: linear-gradient(to bottom, $cool_coder, $cool_facebook);
     color: aliceblue;
@@ -60,9 +60,26 @@ body{
     }
 }
 
+.Button{
+    padding: 10px;
+    width: 10px;
+}
+
+.boton{
+    background-color: $cool_facebook;
+    color: antiquewhite;
+    border-radius: 20px;
+    box-shadow: 1px 1px 12px 0px $cool_facebook;
+}
+
+.boton--cancelar{
+    @extend .boton;
+    background: aliceblue;
+    color: blue;
+}
+
 iframe{
-    width: 350px;
-    height: 200px;
+    @include sizes(350px, 200px)
 }
 
 a:hover{
@@ -93,10 +110,11 @@ a:active{
     .container_3{
         width: 100%;
         background-image: radial-gradient($cool_coder, $cool_facebook);
-        .item_4 img{
+    }
+    .item_4{
+        img{
             padding: 5px;
-            width: 300px;
-            height: 200px;
+            @include sizes(300px, 200px)
         }
     }
     .item_2{
@@ -121,8 +139,7 @@ a:active{
     }
     iframe{
         padding: 0;
-        width: 250px;
-        height: 150px;
+        @include sizes(250px, 150px)
     }
     #titulo{
         @include flex-acenter;
